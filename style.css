@@ -362,3 +362,85 @@ footer a:focus {
   0% { transform: translateY(-40px) rotate(0deg);}
   100% { transform: translateY(100vh) rotate(360deg);}
 }
+/* Responsive adjustments for tablets and below */
+@media (max-width: 900px) {
+  header, section, footer {
+    max-width: 98vw;
+    padding: 1.2em 0.5em;
+    font-size: 1em;
+  }
+  .doggie-frame {
+    max-width: 98vw;
+    height: 200px;
+    border-width: 5px;
+    border-radius: 18px;
+  }
+  .insta-frame {
+    border-radius: 10px;
+  }
+  .wavy-divider svg {
+    height: 40px;
+  }
+}
+
+/* Responsive for mobile phones */
+@media (max-width: 600px) {
+  h1, h2 {
+    font-size: 1.2em;
+    padding: 0.2em 0;
+  }
+  header, section, footer {
+    padding: 0.7em 0.2em;
+    border-radius: 12px;
+    font-size: 0.98em;
+  }
+  .doggie-frame {
+    height: 110px;
+    border-width: 3px;
+    border-radius: 10px;
+    min-width: 0;
+    padding: 0;
+  }
+  .insta-frame {
+    border-radius: 6px;
+  }
+  .speech-bubble {
+    font-size: 0.95em;
+    padding: 0.5em 0.7em;
+    border-radius: 10px;
+    margin: 0.5em 0;
+  }
+  .wavy-divider svg {
+    height: 24px;
+  }
+  .mood-box {
+    font-size: 1em;
+    padding: 0.5em 0.1em;
+    border-radius: 8px;
+    min-width: 0;
+    max-width: 95vw;
+  }
+  #social, #guestbook {
+    max-width: 98vw;
+    padding: 1em 0.2em;
+    border-radius: 10px;
+  }
+  .social-btn {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    border-radius: 7px;
+    margin: 0.3em;
+  }
+  footer {
+    font-size: 1em;
+    padding: 1em 0.2em;
+    border-radius: 12px;
+  }
+}
+
+/* Prevent horizontal scroll on all devices */
+body, html {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
