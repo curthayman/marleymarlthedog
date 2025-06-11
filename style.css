@@ -374,37 +374,73 @@ button:hover {
   background: #ff4e50;
   color: #ffe066;
 }
+#gallery {
+  padding: 0;
+}
+
+#gallery {
+  padding: 0 !important;
+  margin-bottom: 0;
+}
+
+#gallery {
+  padding: 0 !important;
+  margin-bottom: 0;
+  overflow: visible !important;
+}
+
 .doggie-frame {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em;
   background: #fff8f0;
   border: 8px solid #f9d423;
   border-radius: 40px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.12);
   position: relative;
   margin: 2em auto;
-  max-width: 700px;
-  min-height: 400px;
+  max-width: 900px;
+  padding: 0;
+  min-height: 0;
+  height: 340px; /* Adjust to match your widget's height */
+  overflow: hidden;
 }
-.doggie-frame::before, .doggie-frame::after {
-  content: "🐾";
-  font-size: 2.5em;
-  position: absolute;
-  top: 10px;
-}
-.doggie-frame::before {
-  left: 20px;
-}
-.doggie-frame::after {
-  right: 20px;
-}
+
 .insta-frame {
   width: 100%;
-  min-height: 400px;
+  height: 100%;
   border: none;
-  border-radius: 30px;
+  border-radius: 32px;
   background: transparent;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
+
+/* Paw prints in the top corners */
+.doggie-frame::before,
+.doggie-frame::after {
+  content: "🐾";
+  position: absolute;
+  font-size: 2.2em;
+  opacity: 0.7;
+  z-index: 10;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.doggie-frame::before {
+  top: 10px;
+  left: 18px;
+  transform: rotate(-20deg);
+}
+
+.doggie-frame::after {
+  top: 10px;
+  right: 18px;
+  transform: rotate(20deg) scaleX(-1);
+}
+
+
+
 
