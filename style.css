@@ -427,6 +427,7 @@ button:hover {
   z-index: 10;
   pointer-events: none;
   line-height: 1;
+  color: #fff; /* Make paw prints white */
 }
 
 .doggie-frame::before {
@@ -440,6 +441,31 @@ button:hover {
   right: 18px;
   transform: rotate(20deg) scaleX(-1);
 }
+.doggie-frame::before,
+.doggie-frame::after {
+  content: "🐾";
+  position: absolute;
+  font-size: 2.2em;
+  opacity: 0.95;
+  z-index: 10;
+  pointer-events: none;
+  line-height: 1;
+  color: #fff; /* Make paw prints white */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18); /* Optional: subtle shadow for contrast */
+}
+
+.doggie-frame::before {
+  top: 10px;
+  left: 18px;
+  transform: rotate(-20deg);
+}
+
+.doggie-frame::after {
+  top: 10px;
+  right: 18px;
+  transform: rotate(20deg) scaleX(-1);
+}
+
 
 
 
