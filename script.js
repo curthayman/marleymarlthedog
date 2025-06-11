@@ -163,3 +163,24 @@ document.getElementById('playGameBtn').onclick = function() {
   };
   gameArea.appendChild(bone);
 };
+// --- Marley's Mood Widget ---
+const moods = [
+  { emoji: "😴", text: "Sleepy – Time for a cozy nap!" },
+  { emoji: "😃", text: "Happy – Tail wagging and ready for fun!" },
+  { emoji: "🐾", text: "Adventurous – Let’s go outside and explore!" },
+  { emoji: "🍗", text: "Hungry – Is it treat time yet?" },
+  { emoji: "👀", text: "Curious – Watching the world from the window." },
+  { emoji: "🥰", text: "Loving – Ready for cuddles and pets!" },
+  { emoji: "🎾", text: "Playful – Who wants to play fetch?" }
+];
+
+// Pick a random mood each time the page loads
+function setMarleyMood() {
+  const mood = moods[Math.floor(Math.random() * moods.length)];
+  const moodDiv = document.getElementById('marleyMood');
+  if (moodDiv) {
+    moodDiv.innerHTML = `<span class="mood-emoji">${mood.emoji}</span><span class="mood-text">${mood.text}</span>`;
+  }
+}
+setMarleyMood();
+

@@ -479,6 +479,54 @@ button:hover {
   align-items: center;
   margin-top: 1em;
 }
+footer a {
+  color: #ff4e50;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px dashed #f9d423;
+  border-radius: 4px;
+  padding: 0 0.2em;
+  transition:
+    color 0.2s,
+    background 0.2s,
+    border-bottom-color 0.2s;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #fff;
+  background: #ff4e50;
+  border-bottom-color: #ff4e50;
+  text-decoration: none;
+  outline: none;
+}
+.mood-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  background: rgba(255,255,255,0.85);
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 1.2em 0.5em;
+  margin: 1em auto;
+  max-width: 400px;
+  min-height: 80px;
+  transition: background 0.3s;
+}
+.mood-emoji {
+  font-size: 2.5em;
+  margin-bottom: 0.2em;
+}
+.mood-text {
+  font-size: 1.1em;
+  color: #ff4e50;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #f9d42333;
+}
+
+
 
 
 
