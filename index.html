@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marley the Dog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="seasonalDecor"></div>
+  <!-- Loading Animation -->
+  <div id="loadingOverlay">
+    <div class="loader-bone">🦴</div>
+  </div>
+
+  <!-- Animated Paw Prints -->
+  <div id="pawTrail"></div>
+
+  <!-- Image Modal -->
+  <div id="imgModal" class="img-modal">
+    <span id="imgModalClose" class="img-modal-close">&times;</span>
+    <img class="img-modal-content" id="imgModalImg">
+    <div id="imgModalCaption" class="img-modal-caption"></div>
+  </div>
+
+  <header>
+    <h1>
+      Meet Marley!
+      <span class="tail-wag" aria-label="Marley's wagging tail">🐕‍🦺</span>
+    </h1>
+    <p>The coolest dog on the block 🐾</p>
+  </header>
+  <section id="gallery">
+    <h2>Marley’s Adventures</h2>
+    <div class="doggie-frame">
+      <iframe src="https://cdn.lightwidget.com/widgets/f9387dfca0b65abfb655322fc31293c4.html" scrolling="no" allowtransparency="true" class="insta-frame"></iframe>
+    </div>
+  </section>
+
+  <section id="games">
+    <h2>Play with Marley!</h2>
+    <div id="gameArea"></div>
+    <button id="playGameBtn">Start Game</button>
+  </section>
+
+  <!-- Social Sharing -->
+  <section id="social">
+    <h2>Share Marley’s Adventures!</h2>
+    <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank" class="social-btn instagram" aria-label="Instagram">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
+      Instagram
+    </a>
+    <a href="https://tiktok.com/@YOUR_TIKTOK" target="_blank" class="social-btn tiktok" aria-label="TikTok">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" />
+      TikTok
+    </a>
+    <button id="copyLinkBtn" class="social-btn copylink">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.5em;" viewBox="0 0 24 24">
+        <path d="M10 13a5 5 0 0 1 7.07 0l1.41 1.41a5 5 0 0 1-7.07 7.07l-1.41-1.41"/>
+        <path d="M14 11a5 5 0 0 0-7.07 0l-1.41 1.41a5 5 0 0 0 7.07 7.07l1.41-1.41"/>
+      </svg>
+      Copy Page Link
+    </button>
+    <span id="copyMsg" style="display:none;">Link copied!</span>
+  </section>
+
+  <!-- Guestbook -->
+  <section id="guestbook">
+    <h2>Visitor Guestbook</h2>
+    <form action="https://formspree.io/f/mdkzgakn" method="POST" id="guestbookForm">
+      <input type="text" name="name" placeholder="Your name" required>
+      <textarea name="message" placeholder="Your message for Marley" required></textarea>
+      <button type="submit">Sign Guestbook</button>
+    </form>
+    <div id="guestbookThanks" style="display:none;">Thank you for signing the guestbook! 🐾</div>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ for Marley</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
