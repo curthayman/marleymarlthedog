@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <title>Marley the Dog</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Favicon -->
-<link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Falling seasonal emojis and paw prints -->
   <div id="seasonalDecor"></div>
+  <div id="pawTrail"></div>
+
   <!-- Loading Animation -->
   <div id="loadingOverlay">
     <div class="loader-bone">🦴</div>
   </div>
-
-  <!-- Animated Paw Prints -->
-  <div id="pawTrail"></div>
 
   <!-- Image Modal -->
   <div id="imgModal" class="img-modal">
@@ -23,41 +23,63 @@
     <img class="img-modal-content" id="imgModalImg">
     <div id="imgModalCaption" class="img-modal-caption"></div>
   </div>
+
   <header>
     <h1>
       Meet Marley!
       <span class="tail-wag" aria-label="Marley's wagging tail">🐕‍🦺</span>
     </h1>
+    <p class="speech-bubble">I love treats and belly rubs! 🦴</p>
     <p>The coolest dog on the block 🐾</p>
   </header>
-  <section id="bio">
-  <h2>About Marley</h2>
-  <p>
-    Marley is a super cool dog 🐶 who loves exploring the outdoors, especially when he’s on the lookout for neighborhood cats 🐾🐱. He does not like the road or rides in the car. He’s incredibly smart and can often be found gazing out the window, keeping an eye on everything that’s happening outside 👀🌳. Marley is a very good boy—he never has accidents in the house, even if his family is gone for hours. He adores being loved on and always enjoys a good cuddle session 💛.
-  </p>
-  <p>
-    When it comes to food, Marley is a true connoisseur! 🍗🥩 He loves chicken, any kind of meat, and even has a soft spot for bread 🍞. Treats are always welcome, and he sometimes likes to play with his food before eating it. Marley’s gentle, loving nature and playful spirit make him the best companion anyone could ask for! 🦴🐕‍🦺
-  </p>
-</section>
-  <section id="gallery">
-  <h2>Marley’s Adventures</h2>
-  <div class="doggie-frame">
-    <iframe src="https://lightwidget.com/widgets/f9387dfca0b65abfb655322fc31293c4.html" scrolling="no" allowtransparency="true" class="insta-frame"></iframe>
+
+  <!-- Wavy Divider -->
+  <div class="wavy-divider">
+    <svg viewBox="0 0 1440 80" width="100%" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#f9d423" d="M0,40 Q360,80 720,40 T1440,40 V80 H0 Z"/>
+    </svg>
   </div>
-</section>
+
+  <section id="bio">
+    <h2>About Marley</h2>
+    <p>
+      Marley is a super cool dog 🐶 who loves exploring the outdoors, especially when he’s on the lookout for neighborhood cats 🐾🐱. He does not like the road or rides in the car. He’s incredibly smart and can often be found gazing out the window, keeping an eye on everything that’s happening outside 👀🌳. Marley is a very good boy—he never has accidents in the house, even if his family is gone for hours. He adores being loved on and always enjoys a good cuddle session 💛.
+    </p>
+    <p>
+      When it comes to food, Marley is a true connoisseur! 🍗🥩 He loves chicken, any kind of meat, and even has a soft spot for bread 🍞. Treats are always welcome, and he sometimes likes to play with his food before eating it. Marley’s gentle, loving nature and playful spirit make him the best companion anyone could ask for! 🦴🐕‍🦺
+    </p>
+  </section>
+
+  <div class="wavy-divider flip">
+    <svg viewBox="0 0 1440 80" width="100%" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#ff4e50" d="M0,40 Q360,80 720,40 T1440,40 V80 H0 Z"/>
+    </svg>
+  </div>
+
+  <section id="gallery">
+    <h2>Marley’s Adventures</h2>
+    <div class="doggie-frame">
+      <iframe src="https://lightwidget.com/widgets/f9387dfca0b65abfb655322fc31293c4.html" scrolling="no" allowtransparency="true" class="insta-frame"></iframe>
+    </div>
+  </section>
+
+  <div class="wavy-divider">
+    <svg viewBox="0 0 1440 80" width="100%" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#f9d423" d="M0,40 Q360,80 720,40 T1440,40 V80 H0 Z"/>
+    </svg>
+  </div>
+
   <section id="games">
     <h2>Play with Marley!</h2>
     <div id="gameArea"></div>
     <button id="playGameBtn">Start Game</button>
   </section>
-  <section id="mood">
-  <h2>Marley’s Mood</h2>
-  <div id="marleyMood" class="mood-box">
-    <!-- Mood will appear here -->
-  </div>
-</section>
 
-  <!-- Social Sharing -->
+  <section id="mood">
+    <h2>Marley’s Mood</h2>
+    <div id="marleyMood" class="mood-box"></div>
+  </section>
+
   <section id="social">
     <h2>Share Marley’s Adventures!</h2>
     <a href="https://instagram.com/marleymarlthedog" target="_blank" class="social-btn instagram" aria-label="Instagram">
@@ -78,18 +100,18 @@
     <span id="copyMsg" style="display:none;">Link copied!</span>
   </section>
 
-  <!-- Guestbook -->
-<section id="guestbook">
-  <h2>Visitor Guestbook</h2>
-  <div id="shoutbox-container">
-    <script src="https://www.shoutbox.com/chat/17351"></script>
-  </div>
-</section>
-
+  <section id="guestbook">
+    <h2>Visitor Guestbook</h2>
+    <div id="shoutbox-container">
+      <script src="https://www.shoutbox.com/chat/17351"></script>
+    </div>
+  </section>
 
   <footer>
     <p>Made with ❤️ for Marley, by his <a href="https://iamcurthayman.com" target="_blank">Dad</a></p>
   </footer>
+
+  <!-- Main JS -->
   <script src="script.js"></script>
 </body>
 </html>
