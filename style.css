@@ -443,15 +443,14 @@ button:hover {
 }
 .doggie-frame::before,
 .doggie-frame::after {
-  content: "🐾";
+  content: "";
   position: absolute;
-  font-size: 2.2em;
+  width: 2.2em;
+  height: 2.2em;
   opacity: 0.95;
   z-index: 10;
   pointer-events: none;
-  line-height: 1;
-  color: #fff; /* Make paw prints white */
-  text-shadow: 0 2px 8px rgba(0,0,0,0.18); /* Optional: subtle shadow for contrast */
+  background: url('data:image/svg+xml;utf8,<svg width="48" height="48" viewBox="0 0 48 48" fill="white" xmlns="http://www.w3.org/2000/svg"><ellipse cx="24" cy="38" rx="10" ry="6"/><ellipse cx="10" cy="24" rx="4" ry="6"/><ellipse cx="38" cy="24" rx="4" ry="6"/><ellipse cx="16" cy="12" rx="4" ry="6"/><ellipse cx="32" cy="12" rx="4" ry="6"/></svg>') no-repeat center center / contain;
 }
 
 .doggie-frame::before {
@@ -465,6 +464,7 @@ button:hover {
   right: 18px;
   transform: rotate(20deg) scaleX(-1);
 }
+
 
 
 
