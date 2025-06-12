@@ -160,3 +160,60 @@ if (playGameBtn) {
     gameArea.appendChild(bone);
   };
 }
+// --- Send Marley a Treat ---
+function updateTreatCount() {
+  const count = Number(localStorage.getItem('marleyTreats') || 0);
+  document.getElementById('treatCount').textContent = `Marley has received ${count} treat${count === 1 ? '' : 's'} from you!`;
+}
+updateTreatCount();
+
+document.getElementById('sendTreatBtn').onclick = function() {
+  // Animate treat
+  const anim = document.createElement('span');
+  anim.className = 'treat-anim';
+  anim.textContent = '🦴';
+  document.getElementById('treatAnimationArea').appendChild(anim);
+  setTimeout(() => anim.remove(), 1200);
+
+  // Update count
+  let count = Number(localStorage.getItem('marleyTreats') || 0);
+  count++;
+  localStorage.setItem('marleyTreats', count);
+  updateTreatCount();
+};
+// --- Marley's Weather Widget ---
+// Set your city coordinates (example: New York City)
+const marleyLat = 39.008495;
+const marleyLon = -75.465868;
+
+function getWeatherEmoji(code) {
+  if ([0, 1].includes(code)) return "☀️"; // Clear
+  if ([2, 3].includes(code)) return "⛅"; // Partly cloudy
+  if ([45, 48].includes(code)) return "🌫️"; // Fog
+  if ([51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82].includes(code)) return "🌧️"; // Rain
+  if ([71, 73, 75, 77, 85, 86].includes(code)) return "❄️"; // Snow
+  if ([95, 96, 99].includes(code)) return "⛈️"; // Thunderstorm
+  return "🌡️";
+}
+
+function fetchMarleyWeather() {
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${marleyLat}&longitude=${marleyLon}&current_weather=true&temperature_unit=fahrenheit`;
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      const weather = data.current_weather;
+      const emoji = getWeatherEmoji(weather.weathercode);
+      const temp = Math.round(weather.temperature);
+      const wind = Math.round(weather.windspeed);
+      document.getElementById('marleyWeather').innerHTML =
+        `<span class="weather-emoji">${emoji}</span>
+         <span>It’s ${temp}°F and ${weather.weathercode < 2 ? "sunny" : "cloudy"} in Marley’s city!</span>
+         <span style="font-size:0.9em;color:#888;">Wind: ${wind} mph</span>`;
+    })
+    .catch(() => {
+      document.getElementById('marleyWeather').innerHTML = "Couldn’t fetch the weather right now!";
+    });
+}
+fetchMarleyWeather();
+
+
