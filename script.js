@@ -215,5 +215,15 @@ function fetchMarleyWeather() {
     });
 }
 fetchMarleyWeather();
-
-
+// --- Loading Animation ---
+window.addEventListener('load', function() {
+  setTimeout(() => {
+    const overlay = document.getElementById('loadingOverlay');
+    if (overlay) {
+      overlay.style.opacity = 0;
+      setTimeout(() => {
+        overlay.style.display = 'none';
+      }, 700); // matches the CSS transition
+    }
+  }, 900); // Ensures loader is visible for at least 0.9s
+});
