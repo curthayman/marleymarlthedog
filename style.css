@@ -599,3 +599,42 @@ body, html {
     padding: 4px;
   }
 }
+.corner-paw {
+  position: absolute;
+  font-size: 1.7em;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 2;
+  user-select: none;
+}
+.top-left    { top: 0.2em; left: 0.4em; transform: rotate(-20deg);}
+.top-right   { top: 0.2em; right: 0.4em; transform: scaleX(-1) rotate(20deg);}
+.bottom-left { bottom: 0.2em; left: 0.4em; transform: rotate(20deg);}
+.bottom-right{ bottom: 0.2em; right: 0.4em; transform: scaleX(-1) rotate(-20deg);}
+.svg-paw {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.marley-signature {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: 'Comic Neue', cursive;
+  font-size: 1.3em;
+  margin-top: 2em;
+  color: #ff4e50;
+  gap: 0.5em;
+  opacity: 0.85;
+}
+.paw-prints {
+  display: flex;
+  gap: 0.1em;
+  font-size: 1.5em;
+  margin-left: 0.3em;
+  letter-spacing: -0.2em;
+  animation: pawSignature 1.2s infinite alternate;
+}
+@keyframes pawSignature {
+  to { transform: translateY(-4px) scale(1.08) rotate(-8deg);}
+}
