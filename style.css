@@ -520,3 +520,30 @@ body, html {
   0% { transform: rotate(0deg);}
   100% { transform: rotate(360deg);}
 }
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 3001;
+  background: #fffbe7;
+  color: #ff4e50;
+  border: 3px solid #f9d423;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 2.2em;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s, opacity 0.3s;
+  opacity: 0.85;
+  outline: none;
+}
+#backToTop:hover {
+  background: #ff4e50;
+  color: #fffbe7;
+  transform: scale(1.12) rotate(-10deg);
+  opacity: 1;
+}

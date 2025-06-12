@@ -227,3 +227,15 @@ window.addEventListener('load', function() {
     }
   }, 900); // Ensures loader is visible for at least 0.9s
 });
+// --- Back to Top Bone Button ---
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 200) {
+    backToTopBtn.style.display = 'flex';
+  } else {
+    backToTopBtn.style.display = 'none';
+  }
+});
+backToTopBtn.onclick = function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
