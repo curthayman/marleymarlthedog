@@ -16,7 +16,6 @@
   <div id="loadingOverlay">
     <div class="loader-bone">🦴</div>
   </div>
-
   <!-- Image Modal -->
   <div id="imgModal" class="img-modal">
     <span id="imgModalClose" class="img-modal-close">&times;</span>
@@ -25,13 +24,24 @@
   </div>
 
   <header>
-    <h1>
-      Meet Marley!
-      <span class="tail-wag" aria-label="Marley's wagging tail">🐕‍🦺</span>
-    </h1>
-    <p class="speech-bubble">I love treats and belly rubs! 🦴</p>
-    <p>The coolest dog on the block 🐾</p>
-  </header>
+  <div class="header-flex">
+    <div class="header-pic header-pic-left">
+      <img src="assets/IMG_2762.jpeg" alt="Marley photo left" />
+    </div>
+    <div class="header-center">
+      <h1>
+        Meet Marley!
+        <span class="tail-wag" aria-label="Marley's wagging tail">🐕‍🦺</span>
+      </h1>
+      <p class="speech-bubble">I love treats and belly rubs! 🦴</p>
+      <p>The coolest dog on the block 🐾</p>
+    </div>
+    <div class="header-pic header-pic-right">
+      <img src="assets/IMG_3180.jpeg" alt="Dog photo right" />
+    </div>
+  </div>
+</header>
+
 
   <!-- Wavy Divider -->
   <div class="wavy-divider">
@@ -111,18 +121,15 @@
     <span>Fetching weather for Marley...</span>
   </div>
 </section>
-
   <section id="guestbook">
     <h2>Visitor Guestbook</h2>
     <div id="shoutbox-container">
       <script src="https://www.shoutbox.com/chat/17351"></script>
     </div>
   </section>
-
   <footer>
     <p>Made with ❤️ for Marley, by his <a href="https://iamcurthayman.com" target="_blank">Dad</a></p>
   </footer>
-
   <!-- Main JS -->
   <button id="backToTop" title="Back to top" aria-label="Back to top">🦴</button>
   <script src="script.js"></script>
