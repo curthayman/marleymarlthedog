@@ -523,30 +523,32 @@ body, html {
 #backToTop {
   display: none;
   position: fixed;
-  bottom: 32px;
-  right: 32px;
+  bottom: 24px;
+  right: 24px;
   z-index: 3001;
-  background: #fffbe7;
-  color: #ff4e50;
-  border: 3px solid #f9d423;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  font-size: 2.2em;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  background: none;
+  color: #ffb347;
+  border: none;
+  border-radius: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 2em;
+  box-shadow: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, transform 0.2s, opacity 0.3s;
+  transition: color 0.2s, transform 0.2s, opacity 0.3s;
   opacity: 0.85;
   outline: none;
+  padding: 0;
 }
+
 #backToTop:hover {
-  background: #ff4e50;
-  color: #fffbe7;
-  transform: scale(1.12) rotate(-10deg);
+  color: #ff4e50;
+  transform: scale(1.15) rotate(-10deg);
   opacity: 1;
 }
+
 .header-flex {
   display: flex;
   align-items: center;
