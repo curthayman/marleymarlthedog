@@ -145,17 +145,22 @@ if (playGameBtn) {
   playGameBtn.onclick = function() {
     const gameArea = document.getElementById('gameArea');
     if (!gameArea) return;
-    gameArea.innerHTML = '<p>Find the hidden bone! 🦴</p>';
+    gameArea.style.position = 'relative';
+    gameArea.style.minHeight = '130px';
+    gameArea.innerHTML = '<p style="color:#ff4e50;font-weight:bold;">🔍 Find the hidden bone! Click it!</p>';
     const bone = document.createElement('div');
     bone.textContent = '🦴';
     bone.style.position = 'absolute';
-    bone.style.left = Math.random() * 80 + '%';
-    bone.style.top = Math.random() * 80 + '%';
-    bone.style.fontSize = '2em';
+    bone.style.left = (10 + Math.random() * 70) + '%';
+    bone.style.top = (30 + Math.random() * 40) + '%';
+    bone.style.fontSize = '2.2em';
     bone.style.cursor = 'pointer';
+    bone.style.transition = 'transform 0.15s';
+    bone.onmouseenter = () => { bone.style.transform = 'scale(1.2) rotate(15deg)'; };
+    bone.onmouseleave = () => { bone.style.transform = ''; };
     bone.onclick = function() {
-      alert('You found the bone! Marley is happy!');
-      gameArea.innerHTML = '';
+      gameArea.innerHTML = '<p style="color:#4caf50;font-size:1.3em;font-weight:bold;animation:none;">🎉 You found it! Marley is SO happy! 🐕‍🦺</p>';
+      setTimeout(() => { gameArea.innerHTML = ''; gameArea.style.minHeight = ''; }, 2500);
     };
     gameArea.appendChild(bone);
   };
@@ -215,18 +220,6 @@ function fetchMarleyWeather() {
     });
 }
 fetchMarleyWeather();
-// --- Loading Animation ---
-window.addEventListener('load', function() {
-  setTimeout(() => {
-    const overlay = document.getElementById('loadingOverlay');
-    if (overlay) {
-      overlay.style.opacity = 0;
-      setTimeout(() => {
-        overlay.style.display = 'none';
-      }, 700); // matches the CSS transition
-    }
-  }, 900); // Ensures loader is visible for at least 0.9s
-});
 // --- Back to Top Bone Button ---
 const backToTopBtn = document.getElementById('backToTop');
 window.addEventListener('scroll', function() {
